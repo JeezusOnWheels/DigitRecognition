@@ -1,0 +1,35 @@
+    for nodes_to in range(len(weights[0])):
+        for nodes_from in range(len(weights[0][nodes_to])):
+            partial[0][nodes_to][nodes_from]=sigmoidd(nodes[0][nodes_from]*weights[0][nodes_to][nodes_from])
+            total_derivative = error*partial[1][0][nodes_to]*weights[1][0][nodes_to]*partial[0][nodes_to][nodes_from]*nodes[0][nodes_to]
+			#weights[0][nodes_to][nodes_from] = weights[0][nodes_to][nodes_from] - total_derivative
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+    #back propagation for weight[0][0][0]
+    #partial_1 = sigmoidd(inv_sigmoid(nodes[1][0]))
+    #total_derivative = error*partial[1][0]*weights[1][0][0]*partial_1*nodes[0][0]
+    #weights[0][0][0]=weights[0][0][0]-total_derivative
+    
+    #back prop for weight[0][0][1]
+    #partial_1 = sigmoidd(inv_sigmoid(nodes[1][0]))
+    #total_derivative = error*partial[1][0]*weights[1][0][0]*partial_1*nodes[0][1]
+    #weights[0][0][1]=weights[0][0][1]-total_derivative
+    
+    #back prop for weight[0][1][0] #im guessing partial_2 doesnt change
+    #partial_1 = sigmoidd(inv_sigmoid(nodes[1][1]))
+    #total_derivative = error*partial[1][0]*weights[1][0][1]*partial_1*nodes[0][0]
+    #weights[0][1][0]=weights[0][1][0]-total_derivative
+    
+    #back prop for weight[0][1][1] #im guessing partial_2 doesnt change
+    #partial_1 = sigmoidd(inv_sigmoid(nodes[1][1]))
+    #total_derivative = error*partial[1][0]*weights[1][0][1]*partial_1*nodes[0][1]
+    #weights[0][1][1]=weights[0][1][1]-total_derivative
